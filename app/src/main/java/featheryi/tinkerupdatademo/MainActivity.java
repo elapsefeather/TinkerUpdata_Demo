@@ -40,7 +40,7 @@ import android.os.Bundle;
                 File/Project structure/Module>app>signing/新增項目>填入簽名訊息(StoreFile 為 Untitled)
             ．建立連結
                 File/Project structure/Module>app>buildTypes>SigningConfig/選擇剛設定項目
-            ．ok>自動產生 build.gradle 的配置文件
+            ．ok > 自動產生 build.gradle 的配置文件
         。資源掛載
             dependencies{
                 implementation "com.android.support:multidex:1.0.2"
@@ -70,6 +70,7 @@ import android.os.Bundle;
 ======================
     創建基礎包
 ======================
+    ＊一定要配置簽名
     1.右邊 Gradle > 專案名/Tasks/build/
         。assembleDebug   測試版
         。assembleRelease 正式版
@@ -102,6 +103,8 @@ import android.os.Bundle;
         需開啟 app 等待下載補丁
         關閉 app 後二次啟動才生效
 
+    ＊補丁文件必須額外存檔備份
+        否則會被資料夾覆蓋遺失
 */
 
 public class MainActivity extends AppCompatActivity {
